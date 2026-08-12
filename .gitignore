@@ -1,6 +1,8 @@
 # Backend
 backend/ASMS.API/bin/
 backend/ASMS.API/obj/
+backend/ASMS.Tests/bin/
+backend/ASMS.Tests/obj/
 backend/**/*.user
 backend/**/appsettings.Development.json
 
