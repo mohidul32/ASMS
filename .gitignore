@@ -1,0 +1,14 @@
+# Backend
+backend/ASMS.API/bin/
+backend/ASMS.API/obj/
+backend/**/*.user
+backend/**/appsettings.Development.json
+
+# Frontend
+frontend/.next/
+frontend/node_modules/
+frontend/.env.local
+
+# General
+.DS_Store
+*.env
