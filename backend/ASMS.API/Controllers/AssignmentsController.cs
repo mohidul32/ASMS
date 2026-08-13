@@ -62,7 +62,7 @@ public class AssignmentsController(AppDbContext db) : ControllerBase
         {
             Title = req.Title, Description = req.Description,
             SubjectId = req.SubjectId, ClassId = req.ClassId,
-            TeacherId = UserId, Deadline = req.Deadline,
+            TeacherId = UserId, Deadline = DateTime.SpecifyKind(req.Deadline, DateTimeKind.Utc),
             MaxMarks = req.MaxMarks, IsPublished = req.IsPublished,
             AllowLateUpdate = req.AllowLateUpdate
         };
@@ -81,7 +81,7 @@ public class AssignmentsController(AppDbContext db) : ControllerBase
 
         assignment.Title = req.Title;
         assignment.Description = req.Description;
-        assignment.Deadline = req.Deadline;
+        assignment.Deadline = DateTime.SpecifyKind(req.Deadline, DateTimeKind.Utc);
         assignment.MaxMarks = req.MaxMarks;
         assignment.IsPublished = req.IsPublished;
         assignment.AllowLateUpdate = req.AllowLateUpdate;
